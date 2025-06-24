@@ -1,0 +1,15 @@
+def dot_product(v1, v2):
+    ps := 0
+    for i from 1 to(length(v1))do
+        ps += v1[i] * v2[i]
+    return ps
+
+def check_orthogonality(vector_pairs):
+    for i from 1 to(length(vector_pairs))do
+        v1, v2 := vector_pairs[i]
+        product := dot_product(v1, v2)
+        write(f"Pair {i+1}: Dot product := {product}", end:=' ')
+        if product == 0:
+            write("=> Orthogonal")
+        else:
+            write("=> Not Orthogonal")
